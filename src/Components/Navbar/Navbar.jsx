@@ -1,7 +1,13 @@
-function Navbar() {
+import PropTypes from "prop-types";
+
+function Navbar({ isAtBottom }) {
   return (
-    <div className="bg-transparent backdrop-blur-sm fixed z-[999] w-full px-20 py-8 flex justify-between items-center">
-      <div className="logo">Logo</div>
+    <div
+      className={`bg-transparent backdrop-blur-sm fixed z-[999] w-full px-20 py-6 flex justify-between items-center ${
+        isAtBottom && "shadow-lg text-black transition-all ease duration-500"
+      }`}
+    >
+      <div className="logo text-[2vw]">Logo</div>
 
       <div className="links flex gap-10">
         {["Services", "Our work", "About us", "Insights", "Contact us"].map(
@@ -20,5 +26,9 @@ function Navbar() {
     </div>
   );
 }
+
+Navbar.propTypes = {
+  isAtBottom: PropTypes.bool.isRequired,
+};
 
 export default Navbar;

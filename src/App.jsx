@@ -1,12 +1,15 @@
+import { useState } from "react";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Home from "./Components/Home/Home";
 import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
+  const [isAtBottom, setIsAtBottom] = useState(false);
+
   return (
-    <div className="w-full min-h-screen bg-zinc-900 text-white relative">
+    <div className="w-full min-h-screen bg-zinc-900 text-white relative scroll-smooth">
       <nav>
-        <Navbar />
+        <Navbar isAtBottom={isAtBottom} />
       </nav>
 
       <main>
@@ -14,7 +17,7 @@ function App() {
       </main>
 
       <footer>
-        <ContactUs />
+        <ContactUs setIsAtBottom={setIsAtBottom} />
       </footer>
     </div>
   );
