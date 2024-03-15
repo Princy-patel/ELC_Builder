@@ -26,7 +26,7 @@ function OurCollections() {
   ];
 
   return (
-    <div className="h-screen w-full p-20 flex-col justify-center">
+    <div className="h-screen w-full p-20">
       <h1 className="m-20 pt-20 text-4xl text-center  leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
         Our Collections
       </h1>

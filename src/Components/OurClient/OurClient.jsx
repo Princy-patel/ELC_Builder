@@ -25,7 +25,7 @@ function OurClient() {
   ];
 
   return (
-    <div className="h-screen w-full flex justify-center items-center flex-col">
+    <div className="h-screen w-full">
       <h1 className="text-4xl text-center  leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
         Our Clients
       </h1>
