@@ -1,3 +1,6 @@
+import OurCollections from "./Components/OurCollections";
+import OurClient from "./Components/OurClient";
+import OurStories from "./Components/OurStories";
 import { useState } from "react";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Home from "./Components/Home/Home";
@@ -9,15 +12,18 @@ function App() {
   return (
     <div className="w-full min-h-screen bg-zinc-900 text-white relative scroll-smooth">
       <nav>
-        <Navbar isAtBottom={isAtBottom} />
+        <Navbar isAtBottom={isAtBottom}/>
       </nav>
 
       <main>
         <Home />
+        <OurCollections />
+        <OurClient />
+        <OurStories />
       </main>
 
       <footer>
-        <ContactUs setIsAtBottom={setIsAtBottom} />
+      <ContactUs setIsAtBottom={setIsAtBottom} />
       </footer>
     </div>
   );
