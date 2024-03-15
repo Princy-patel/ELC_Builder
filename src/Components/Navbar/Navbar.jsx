@@ -4,7 +4,8 @@ function Navbar({ isAtBottom }) {
   return (
     <div
       className={`bg-transparent backdrop-blur-sm fixed z-[999] w-full px-20 py-6 flex justify-between items-center ${
-        isAtBottom && "shadow-lg text-black transition-all ease duration-500"
+        isAtBottom &&
+        "shadow-lg text-white transition-all ease duration-500 bg-[#2d374899]"
       }`}
     >
       <div className="logo text-[2vw]">Logo</div>
