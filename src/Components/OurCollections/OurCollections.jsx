@@ -26,29 +26,38 @@ function OurCollections() {
   ];
 
   return (
-    <div className="h-screen w-full p-20">
-      <h1 className="m-20 pt-20 text-4xl text-center  leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-        Our Collections
-      </h1>
-
-      <div className="flex justify-between">
-        {details.map((data,index) => (
-          
-            <div key={index} className="relative flex-auto w-1/3">
-              <img
-                src={data.image}
-                alt="Collection Image"
-                className="w-full h-full"
-              />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-black bg-opacity-50 hover:opacity-100 transition-opacity duration-300">
-                <div className="text-white text-center">
-                  <h6 className="font-bold text-3xl">{data.title}</h6>
-                  <p>{data.description}</p>
+    <div className="min-h-screen p-10 flex-col flex justify-center items-center max-md:p-2">
+      <div>
+        <h2 className="text-[3vw] font-bold max-md:text-[5vw]">
+          Our Collection
+        </h2>
+      </div>
+      <div className="flex max-md:flex-col justify-center items-center mt-10">
+        {details.map((data, index) => {
+          return (
+            <>
+              <div key={index} className="relative cursor-pointer">
+                <div className="block rounded-lg bg-white text-white shadow-secondary-1 dark:bg-surface-dark">
+                  <img
+                    className="rounded-lg w-full h-full"
+                    src={data.image}
+                    alt=""
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-black bg-opacity-50 hover:opacity-100 transition-opacity duration-300">
+                    <div className="text-white text-center">
+                      <h6 className="font-bold text-[3vw] md:text-[2vw]">
+                        {data.title}
+                      </h6>
+                      <p className="text-[2vw] md:text-[1vw]">
+                        {data.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          
-        ))}
+            </>
+          );
+        })}
       </div>
     </div>
   );

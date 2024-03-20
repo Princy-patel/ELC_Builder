@@ -15,7 +15,7 @@ function Home() {
           </h1>
         </div>
 
-        <div className="border-b-2">
+        <div className="border-b-2 text-[1vw] max-md:text-[2vw]">
            <a href="#">SHOP NOW</a>
         </div>
       </div>

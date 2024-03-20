@@ -25,21 +25,28 @@ function OurClient() {
   ];
 
   return (
-    <div className="h-screen w-full">
-      <h1 className="text-4xl text-center  leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+    <div className="min-h-screen w-full max-md:mb-4">
+      <h1 className="text-[10vw] text-center leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
         Our Clients
       </h1>
-      <div className="flex justify-between">
+      <div className="grid-cols-1 sm:grid md:grid-cols-3">
         {details.map((data, index) => (
-          <div key={index} className="w-1/3 h-[20em] m-20 ">
-            <img
-              src={data.image}
-              alt="Collection Image"
-              className="w-full h-full"
-            />
-            <div className="text-white text-center m-5">
-              <h6 className="font-bold text-3xl p-4">{data.title}</h6>
-              <p>{data.description}</p>
+          <div
+            key={index}
+            className="mx-3 mt-6 w-1/2 h-1/2 h-min flex flex-col rounded-lg text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0 place-self-center"
+          >
+            <a href="#!">
+              <img
+                className="rounded-t-lg w-full"
+                src={data.image}
+                alt="Skyscrapers"
+              />
+            </a>
+            <div className="p-6">
+              <h5 className="mb-2 text-xl font-medium leading-tight">
+                {data.title}
+              </h5>
+              <p className="mb-4 text-[1vw]">{data.description}</p>
             </div>
           </div>
         ))}

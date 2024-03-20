@@ -1,5 +1,21 @@
 .home_image {
-  background-image: url("../../assets/Home_bg.jpg");
+  background-image: url('../../assets/Home_bg.jpg');
   background-size: cover;
-  background-position: 0%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .home_image {
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home_image {
+    min-height: 300px; /* Adjust height for smaller screens */
+  }
 }
